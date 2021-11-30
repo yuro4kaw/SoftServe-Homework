@@ -140,7 +140,6 @@ switch (Hour) {
   case 2:
   case 3:
   case 4:
-
     console.log("Доброї ночі");
     break;
   case 5:
