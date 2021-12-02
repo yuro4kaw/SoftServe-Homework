@@ -119,6 +119,7 @@ if (area > 0) {
 }
 
 //task 7
+
 Data = new Date();
 Hour = Data.getHours();
 console.log(Hour);
@@ -133,37 +134,18 @@ if (Hour > 22 || Hour < 5) {
   console.log("Доброго вечора");
 }
 
-switch (Hour) {
-  case 23:
-  case 0:
-  case 1:
-  case 2:
-  case 3:
-  case 4:
+switch (true) {
+  case Hour >= 22 || Hour <= 5:
     console.log("Доброї ночі");
     break;
-  case 5:
-  case 6:
-  case 7:
-  case 8:
-  case 9:
-  case 10:
+  case Hour > 4 && Hour < 11:
     console.log("Доброго ранку");
     break;
-  case 11:
-  case 12:
-  case 13:
-  case 14:
-  case 15:
-  case 16:
+  case Hour > 10 && Hour < 18:
     console.log("Доброго дня");
     break;
-  case 17:
-  case 18:
-  case 19:
-  case 20:
-  case 21:
-  case 22:
+  case Hour > 17 && Hour < 23:
     console.log("Доброго вечора");
     break;
 }
+
