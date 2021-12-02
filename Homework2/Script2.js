@@ -66,8 +66,8 @@ cities = cities.join(" * ");
 console.log(cities);
 
 //task 5
-let age = prompt("Введіть ваш вік", "");
-if (age >= 18) {
+let isAdult = prompt("Введіть ваш вік", "");
+if (isAdult >= 18) {
   console.log("Ви досягли повнолітнього віку");
 } else {
   console.log("Ви ще занадто молоді");
