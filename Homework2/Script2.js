@@ -62,8 +62,8 @@ console.log(arr);
 
 //task 4
 let cities = ["Rome", "Lviv", "Warsaw"];
-let xr = cities[0] + "*" + cities[1] + "*" + cities[2] + "*";
-console.log(xr);
+cities = cities.join(" * ");
+console.log(cities);
 
 //task 5
 let age = prompt("Введіть ваш вік", "");
