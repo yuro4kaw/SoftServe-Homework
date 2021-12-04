@@ -78,8 +78,10 @@ function lastElem(myArray, k) {
 console.log(lastElem([52, 61, 58, 76, 35, 23], 4));
 
 //task 8
+var str = "каждый охотник желает знать";
+
 function Upper(str) {
-  var str = "каждый охотник желает знать";
+  
   return str.replace(/(^|\s)\S/g, function (a) {
     return a.toUpperCase();
   });
