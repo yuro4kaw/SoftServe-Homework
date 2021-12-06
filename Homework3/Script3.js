@@ -81,7 +81,7 @@ function lastElem(myArray, k) {
 console.log(lastElem([52, 61, 58, 76, 35, 23], 4));
 
 //task 8
-var str = "каждый охотник желает знать";
+var str = "hello world its me";
 
 function Upper(str) {
   
