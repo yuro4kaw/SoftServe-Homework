@@ -19,7 +19,7 @@ while (i > 0) {
 console.log(result);
 
 //task 2
-for (var i = 0; i <= 15; i++) {
+for (let i = 0; i <= 15; i++) {
   if (i % 2 === 0) {
     console.log(i + " is odd.");
   } else {
