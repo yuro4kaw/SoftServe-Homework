@@ -33,11 +33,14 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const arr = [];
+const arr2 = [];
 function randArray(k) {
-  arr.length = k;
-  arr[i] = getRndInteger(1, 500);
-  console.log(arr);
+  arr2.length = k;
+  let i;
+  for (i = 0; i < arr2.length; ++i) {
+    arr2[i] = getRndInteger(1, 500);
+  }
+  console.log(arr2);
 }
 randArray(4);
 
