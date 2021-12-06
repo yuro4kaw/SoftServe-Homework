@@ -76,6 +76,9 @@ findUnique([2, 6, 7, 3, 2]);
 //task 7
 function lastElem(myArray, k) {
   let newArray = myArray.splice(-k, k);
+  if (k == undefined) {
+    return myArray[myArray.length - 1];
+  }
   return newArray;
 }
 console.log(lastElem([52, 61, 58, 76, 35, 23], 4));
