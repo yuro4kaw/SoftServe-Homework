@@ -91,20 +91,25 @@ try {
 
 // task 4
 function showUser(id) {
-  let user = {
-    Id: id,
-  };
-
-  try {
-    if (id < 0) {
-      throw new Error();
-    } else {
-      return user;
-    }
-  } catch (Error) {
-    console.log("Error: ID must not be negative: " + id);
+  if (id < 0) {
+    throw new Error("ID must not be negative: " + id);
   }
+  return { id: id };
 }
-showUser(5);
+
+function showUsers(ids) {
+  let final = [];
+  ids.forEach(function (id) {
+    try {
+      let person = showUser(id);
+      final.push(person);
+    } catch (Error) {
+      console.log(Error.message);
+    }
+  });
+  return final;
+}
+showUsers([5, -6, -3, -4, 1, 2, 3]);
+
 function showUsers(ids) {}
 showUsers([5, 6, 3, 4, 1, 2, 3]);
