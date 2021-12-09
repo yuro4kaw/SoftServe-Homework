@@ -111,5 +111,3 @@ function showUsers(ids) {
 }
 showUsers([5, -6, -3, -4, 1, 2, 3]);
 
-function showUsers(ids) {}
-showUsers([5, 6, 3, 4, 1, 2, 3]);
