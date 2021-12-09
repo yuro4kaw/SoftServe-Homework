@@ -15,7 +15,7 @@ try {
   calcRectangleArea();
   console.log(area);
 } catch (Error) {
-  console.log("Please only enter numeric characters only. (Allowed input:0-9)");
+  console.log("Please only enter numeric characters only.);
 }
 
 //task 2
