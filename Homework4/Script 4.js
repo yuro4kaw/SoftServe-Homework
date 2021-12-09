@@ -15,7 +15,7 @@ try {
   calcRectangleArea();
   console.log(area);
 } catch (Error) {
-  console.log("Please only enter numeric characters only.);
+  console.log("Please only enter numeric characters only.");
 }
 
 //task 2
@@ -37,7 +37,7 @@ try {
   console.log("film");
 } catch (Error) {
   if (Error.message == "Clear") {
-    console.log("Please enter age.");
+    console.log("The field is empty! Please enter your age");
   } else if (Error.message == "NaN") {
     console.log("Please enter numeric characters only.");
   } else if (Error.message == "Less14") {
