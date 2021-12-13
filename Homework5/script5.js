@@ -176,7 +176,7 @@ const reducer = (previousValue, currentValue) => previousValue + currentValue;
 const figures = [
   new Triangle(4, 5),
   new Square(7),
-  new Circle(5),
+  new Circle(4),
   new Circle(3),
   new Triangle(2, 15),
 ];
