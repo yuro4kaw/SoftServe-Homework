@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--*********************** task 1 ***********************-->
+    <h1>Task1</h1>
+    <div id="test">First</div>
+    <!--<script>
+      document.getElementById("test").innerHTML = "Last";
+    </script>-->
+    <script>
+      document.getElementsByTagName("div")[0].innerHTML = "Last";
+    </script>
+    <!--*********************** task 2 ***********************-->
+    <h1>Task2</h1>
+    <img class="image" src="images/dog.jpg" /><br />
+    <button id="foto">Change to cat!</button>
+    <script>
+      foto.onclick = function () {
+        document.getElementsByClassName("image")[0].src = "images/cat.jpg";
+        let img5 = document.querySelector("img");
+        alert(img5.outerHTML);
+      };
+    </script>
+    <!--*********************** task 3 ***********************-->
+    <h1>Task3</h1>
+    <h2>Article header</h2>
+    <div id="text">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+    </div>
+    <p>Another text</p>
+    <p id="demo"></p>
+    <script>
+      const myNodelist = document.querySelectorAll("#text > p");
+      for (let i = 0; i < myNodelist.length; i++) {
+        document.write("Selector text " + [i] + ": " + myNodelist[i].innerHTML);
+        document.write("<br/>");
+      }
+    </script>
+    <!--*********************** task 4 ***********************-->
+    <h1>Task4</h1>
+    <ul id="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <button onclick="sortBi()">Sort this</button>
+    <script>
+      let listItems = document.querySelectorAll("#list > li");
+      function sortBi() {
+        alert(
+          listItems[0].innerHTML +
+            ", " +
+            listItems[4].innerHTML +
+            ", " +
+            listItems[1].innerHTML +
+            ", " +
+            listItems[3].innerHTML +
+            ", " +
+            listItems[2].innerHTML
+        );
+      }
+    </script>
+    <!--*********************** task 6 ***********************-->
+    <h1>Task6</h1>
+    <body>
+      <input type="text" id="input1" value="Text1" />
+      <input type="text" id="input2" value="Text2" />
+    </body>
+    <script>
+      let var1 = prompt("task 6: enter 1 value");
+      let var2 = prompt("task 6: enter 2 value");
+      document.getElementById("input1").value = var1;
+      document.getElementById("input2").value = var2;
+    </script>
+  </body>
+</html>

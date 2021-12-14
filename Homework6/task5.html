@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+      <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+      <li>Make</li>
+      <li>me</li>
+      <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+    <script>
+      document.querySelector("h1").style.backgroundColor = "#93eb93";
+      document.querySelectorAll("p")[0].style.fontWeight = "bold";
+      document.querySelectorAll("p")[1].style.color = "red";
+      document.querySelectorAll("p")[2].style.textDecoration = "underline";
+      document.querySelectorAll("p")[3].style.fontStyle = "italic";
+      document.querySelectorAll("#myList > li")[0].style.display = "inline";
+      document.querySelectorAll("#myList > li")[1].style.display = "inline";
+      document.querySelectorAll("#myList > li")[2].style.display = "inline";
+      document.querySelector("span").style.display = "none";
+    </script>
+  </body>
+</html>
