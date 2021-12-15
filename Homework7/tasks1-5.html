@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--*********************** task 1 ***********************-->
+    <!--<h1>Task1</h1>
+
+    <script>
+      let openTab = window.open(
+        "#",
+        "New window",
+        "width=300,height=300,left=0,top=0"
+      );
+      function resize_now() {
+        window.resizeTo(500, 500);
+      }
+      function move_now() {
+        window.moveTo(200, 200);
+      }
+      function close_now() {
+        openTab.close();
+      }
+
+      setTimeout(resize_now, 2000);
+      setTimeout(move_now, 4000);
+      setTimeout(close_now, 6000);
+    </script>-->
+
+    <!--*********************** task 2 ***********************-->
+    <h1>Task2</h1>
+
+    <p id="text">I learning JavaScript events!</p>
+    <div>
+      <button type="button" id="myBtn">Change style!</button>
+    </div>
+    <script>
+      function eventHandler(event) {
+        document.getElementById("text").style.color = "orange";
+        document.getElementById("text").style.fontSize = "20px";
+        document.getElementById("text").style.fontFamily = "Comic Sans MS";
+      }
+
+      document.getElementById("myBtn").onclick = eventHandler;
+    </script>
+
+    <!--*********************** task 3 ***********************-->
+    <h1>Task3</h1>
+
+    <div id="r">
+      <button id="blue">Click to make page blue.</button>
+      <button id="pink">Double-click to make page pink.</button>
+      <button id="brown">Click and hold to make page brown.</button>
+      <a href="#" id="yellow">Hover over to make page yellow</a>
+    </div>
+    <script>
+      blue.onclick = function eventHandler1() {
+        document.body.style.backgroundColor = "blue";
+      };
+
+      pink.ondblclick = function eventHandler2() {
+        document.body.style.backgroundColor = "pink";
+      };
+
+      brown.onmousedown = function eventHandler3() {
+        document.body.style.backgroundColor = "#523A28";
+      };
+      brown.onmouseup = function eventHandler4() {
+        document.body.style.backgroundColor = "white";
+      };
+      yellow.onmouseover = function eventHandler5() {
+        document.body.style.backgroundColor = "yellow";
+      };
+      yellow.onmouseout = function eventHandler5() {
+        document.body.style.backgroundColor = "white";
+      };
+    </script>
+
+    <!--*********************** task 4 ***********************-->
+    <h1>Task4</h1>
+
+    <select id="sel">
+      <option>option 1</option>
+      <option>option 2</option>
+      <option>option 3</option>
+      <option>option 4</option>
+      <option>option 5</option>
+    </select>
+    <button id="remove">Choose and remove</button>
+    <script>
+      remove.onclick = function removeOptionSelected() {
+        var elSel = document.getElementById("sel");
+        var i;
+        for (i = elSel.length - 1; i >= 0; i--) {
+          if (elSel.options[i].selected) {
+            elSel.remove(i);
+            break;
+          }
+        }
+      };
+    </script>
+
+    <!--*********************** task 5 ***********************-->
+    <h1>Task5</h1>
+
+    <button id="myBt">Live button</button>
+    <script>
+      myBt.onmouseover = function addElement() {
+        var newDiv = document.createElement("p");
+        newDiv.innerHTML = "Mouse on me!";
+        my_button = document.getElementById("myBt");
+        document.body.after(my_button, newDiv);
+      };
+      myBt.onmouseout = function eventHandler7() {
+        var newDiv2 = document.createElement("p");
+        newDiv2.innerHTML = "Mouse is not on me!";
+        my_button = document.getElementById("myBt");
+        document.body.after(my_button, newDiv2);
+      };
+      myBt.onclick = function eventHandler8() {
+        var newDiv3 = document.createElement("p");
+        newDiv3.innerHTML = "I was pressed!";
+        my_button = document.getElementById("myBt");
+        document.body.after(my_button, newDiv3);
+      };
+    </script>
+  </body>
+</html>

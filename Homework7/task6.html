@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task6</title>
+  </head>
+  <body>
+    <!--*********************** task 6 ***********************-->
+    <h1 id="task">Task6</h1>
+
+    <p id="h1">Height:</p>
+    <p id="g1"></p>
+    <p id="h2">Width:</p>
+    <p id="g2"></p>
+
+    <style>
+      #h1,
+      #g1,
+      #h2,
+      #g2 {
+        display: inline;
+      }
+    </style>
+
+    <script>
+      var newDiv2 = document.getElementById("g1");
+      newDiv2.innerHTML = document.documentElement.clientHeight;
+      var newDiv3 = document.getElementById("g2");
+      newDiv3.innerHTML = document.documentElement.clientWidth;
+      function res() {
+        var newDiv2 = document.getElementById("g1");
+        newDiv2.innerHTML = document.documentElement.clientHeight;
+        var newDiv3 = document.getElementById("g2");
+        newDiv3.innerHTML = document.documentElement.clientWidth;
+      }
+
+      window.addEventListener("resize", res);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task7</title>
+  </head>
+  <body>
+    <!--*********************** task 7 ***********************-->
+    <h1>Task7</h1>
+    <select name="country" id="country">
+      <option value="ger">Germany</option>
+      <option value="usa">USA</option>
+      <option value="ukr">Ukraine</option>
+    </select>
+    <select name="city" id="city"></select>
+
+    <p></p>
+
+    <div id="place"></div>
+    <script>
+      var cities = {
+        ger: ["Berlin", "Hamburg", "Stuttgart"],
+        usa: ["New York", "Los Angeles", "Chicago"],
+        ukr: ["Kyiv", "Lviv", "Chernivtsi"],
+      };
+      var country = document.getElementById("country");
+      var city = document.querySelector("#city");
+      window.onload = selectCountry;
+      country.onchange = selectCountry;
+
+      function selectCountry(ev) {
+        city.innerHTML = "";
+        var c = this.value || "ger",
+          o;
+        for (let i = 0; i < cities[c].length; i++) {
+          o = new Option(cities[c][i], i, false, false);
+          city.add(o);
+        }
+      }
+    </script>
+  </body>
+</html>
