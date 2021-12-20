@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--*********************** task 1 ***********************-->
+
+    <script>
+      function upperCase(value) {
+        if (value.match(/^[A-Z]/)) {
+          console.log("String's starts with uppercase character");
+        } else if (value.match(/^[a-z]/)) {
+          console.log("String's not starts with uppercase character");
+        }
+      }
+      upperCase("regexp");
+      upperCase("RegExp");
+    </script>
+
+    <!--*********************** task 2 ***********************-->
+
+    <script>
+      function checkEmail(value) {
+        let regul = /@gmail\.com/;
+        let k = regul.test(value);
+        console.log(k);
+      }
+      checkEmail("Qmail2@gmail.com");
+    </script>
+
+    <!--*********************** task 3 ***********************-->
+    <script>
+      console.log(/d(b+)(d)/i.exec("cdbBdbsbz"));
+    </script>
+
+    <!--*********************** task 4 ***********************-->
+
+    <script>
+      console.log("java script".replace(/([\w ]+) ([\w ]+)/g, "$2, $1"));
+    </script>
+
+    <!--*********************** task 5 ***********************-->
+
+    <script>
+      function card(value) {
+        if (value.match(/(\d{4}-){3}\d{4}$/g)) {
+          console.log("Completed!");
+        } else {
+          console.log("Wrong card!");
+        }
+      }
+      card("9999-9999-9999-9999");
+    </script>
+
+    <!--*********************** task 6 ***********************-->
+
+    <script>
+      function checkEmail2(value) {
+        if (value.match(/^[a-z(-,_){1}0-9(-,_){1}A-Z(-,_){1}]+@gmail\.com$/g)) {
+          console.log("hello");
+        } else {
+          console.log("Wrong email!");
+        }
+      }
+      checkEmail2("fF6@gmail.com");
+    </script>
+
+    <!--*********************** task 7 ***********************-->
+
+    <script>
+      function checkLogin(value) {
+        if (value.match(/^[0-9a-z]{2,10}$/)) {
+          console.log("hello");
+        } else {
+          console.log("Wrong email!");
+        }
+      }
+      checkLogin("fflwr2lr");
+    </script>
+  </body>
+</html>
