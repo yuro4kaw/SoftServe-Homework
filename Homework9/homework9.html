@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+
+      <!--*********************** task 1 ***********************-->
+      
+    <a href="https://www.google.com/">blank if https</a>
+    <script>
+      $('a[href^="https://"]').attr("target", "_blank");
+    </script>
+
+    <!--*********************** task 2 ***********************-->
+    <h1>task2</h1>
+    <hr>
+    <h2 class="head">header1</h2>
+    <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+    <h2>header3</h2>
+    <h2 class="head">header4 <span>inner elem2</span></h2>
+    <h2>header5</h2>
+    <script>
+    $("h2.head").css("background-color", "green").find(".inner").css("font-size", "35px");
+    </script>
+
+    <!--*********************** task 3 ***********************-->
+    <h1>task3</h1>
+
+    
+   <h3>header1</h3>
+   <div>text1</div>
+   <h3>header2</h3>
+   <div>text2</div>
+
+  <script>
+  let $d = $("div");
+  let $h = $("h3");
+  $d.eq(0).attr("id", "first_div");
+  $h.eq(0).attr("id", "first_h");
+  $("#first_div").insertBefore("#first_h")
+  $d.eq(1).attr("id", "second_div");
+  $h.eq(1).attr("id", "second_h");
+  $("#second_div").insertBefore("#second_h")
+  </script>
+
+    <!--*********************** task 4 ***********************-->
+    <h1>task4</h1>
+
+    <input type="checkbox"  class="check" onchange="countChecked()">
+    <input type="checkbox"  class="check" onchange="countChecked()">
+    <input type="checkbox"  class="check" onchange="countChecked()">
+    <input type="checkbox"  class="check" onchange="countChecked()">
+    <input type="checkbox"  class="check" onchange="countChecked()">
+    <input type="checkbox"  class="check" onchange="countChecked()">
+    
+      <script>
+        function countChecked() {
+          let n = $( "input:checked" ).length;
+          if (n >= 3){
+            $(".check").prop('disabled', true);
+          }
+        };
+    </script>
+  </body>
+</html>
+   
