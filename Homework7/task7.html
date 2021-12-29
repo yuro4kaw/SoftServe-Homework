@@ -39,6 +39,12 @@
           city.add(o);
         }
       }
+      let parag = document.querySelector("p");
+      function r (){
+        parag.innerHTML = "";
+        parag.innerHTML =  country.options[country.selectedIndex].text + ", " +
+        city.options[city.selectedIndex].text;
+      }
     </script>
   </body>
 </html>
