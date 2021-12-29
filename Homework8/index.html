@@ -56,14 +56,16 @@
       card("9999-9999-9999-9999");
     </script>
 
-    <!--*********************** task 6 ***********************-->
+     <!--*********************** task 6 ***********************-->
 
     <script>
-      function checkEmail2(value) {
-        if (value.match(/^[a-z(-,_){1}0-9(-,_){1}A-Z(-,_){1}]+@gmail\.com$/g)) {
-          console.log("hello");
+      function checkEmail2(str) {
+        const limit = /^[a-zA-Z0-9]+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
+        if (limit.test(str)) 
+        {
+          console.log("Email is correct!");
         } else {
-          console.log("Wrong email!");
+          console.log("Email is not correct!!");
         }
       }
       checkEmail2("fF6@gmail.com");
@@ -72,14 +74,14 @@
     <!--*********************** task 7 ***********************-->
 
     <script>
-      function checkLogin(value) {
-        if (value.match(/^[0-9a-z]{2,10}$/)) {
-          console.log("hello");
-        } else {
-          console.log("Error");
-        }
+      checkLogin = (value) => {
+      const limit = /^[a-zA-Z]{1}[a-zA-Z0-9]\.]{1-9}$/;
+      const num = /[0-9\.]+/g;
+      const numRes = value.match(num);
+      const result = limit.test(value);
+      console.log('',result, '\n', numRes);
       }
-      checkLogin("fflwr2lr");
+      checkLogin('ee1.1ret3');
     </script>
   </body>
 </html>
