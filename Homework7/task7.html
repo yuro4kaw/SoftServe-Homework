@@ -22,19 +22,19 @@
     <p></p>
 
     <script>
-      var cities = {
+      let cities = {
         ger: ["Berlin", "Hamburg", "Stuttgart"],
         usa: ["New York", "Los Angeles", "Chicago"],
         ukr: ["Kyiv", "Lviv", "Chernivtsi"],
       };
-      var country = document.getElementById("country");
-      var city = document.querySelector("#city");
+      let country = document.getElementById("country");
+      let city = document.querySelector("#city");
       window.onload = selectCountry;
       country.onchange = selectCountry;
 
       function selectCountry(ev) {
         city.innerHTML = "";
-        var c = this.value || "ger",
+        let c = this.value || "ger",
           o;
         for (let i = 0; i < cities[c].length; i++) {
           o = new Option(cities[c][i], i, false, false);
