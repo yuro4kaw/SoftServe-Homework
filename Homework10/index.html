@@ -32,9 +32,9 @@ console.log(age4); // 26
 <!--*********************** task 3 ***********************-->
 <script> 
 function mul() {  
-var sum = 1;  
-var count = 0;  
-for (var i = 0; i < arguments.length; i++){  
+let sum = 1;  
+let count = 0;  
+for (let i = 0; i < arguments.length; i++){  
 if (typeof(arguments[i])==="number"){  
 sum *=arguments[i];  
 count++;  
@@ -45,19 +45,14 @@ return sum;
 console.log(mul(1, "str", 2, 3, true)); // 6
 console.log(mul(null, "str", false, true)); // 0
 </script>
-<!--*********************** task 4 ***********************-->
+<!--*********************** task 4 (Не зміг виконати) ***********************-->
 <script>
 let server = {
     data: 0,
-    convertToString: (callback) => { 
-      
-       
+    convertToString: (callback) => {   
             return this.data + "";
-    
-      
-      }
+     }
 };
-
 let client = {
     server: server,
     result: "",
