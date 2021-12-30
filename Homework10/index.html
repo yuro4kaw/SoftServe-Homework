@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--*********************** task 1 ***********************-->
+<script>
+let arr = ["Tom", "Sam", "Ray", "Bob"];
+let [x,y, ,...z] = arr;
+z = rest
+console.log(x); // "Tom"
+console.log(y); // "Sam"
+console.log(z); // [Bob]
+</script>
+<!--*********************** task 2 ***********************-->
+<script>
+let data = {
+names: ["Sam", "Tom", "Ray", "Bob"],
+ages: [20, 24, 22, 26],
+};
+let {names: {[1]: name2, [3]: name4}, ages: {[1]: age2,[3]: age4 }} = data;
+console.log(name2); // "Tom"
+console.log(age2); // 24
+console.log(name4); // "Bob"
+console.log(age4); // 26
+
+</script>
+<!--*********************** task 3 ***********************-->
+<script> 
+function mul() {  
+var sum = 1;  
+var count = 0;  
+for (var i = 0; i < arguments.length; i++){  
+if (typeof(arguments[i])==="number"){  
+sum *=arguments[i];  
+count++;  
+}}  
+if (count == 0) return 0;  
+return sum;  
+}  
+console.log(mul(1, "str", 2, 3, true)); // 6
+console.log(mul(null, "str", false, true)); // 0
+</script>
+<!--*********************** task 4 ***********************-->
+<script>
+let server = {
+    data: 0,
+    convertToString: (callback) => { 
+      
+       
+            return this.data + "";
+    
+      
+      }
+};
+
+let client = {
+    server: server,
+    result: "",
+    calc: function (data) {
+       this.server.data = data;
+       this.server.convertToString(this.notification());
+    },
+    notification: function () {
+       return (() => {
+          this.result = callback();
+       })
+    }
+ };
+ client.calc(123);
+ console.log(client.result); // "123"
+ console.log(typeof client.result); // "string"
+</script>
+
+!--*********************** task 5 ***********************-->
+<script>
+function mapBuilder (keysArray, valuesArrays) {
+   const map = new Map();
+   for(let i = 0; i < keys.length; i++){
+      map.set(keys[i], values[i]);
+   };
+   return map;
+}
+let keys = [1, 2, 3, 4];
+let values = ["div", "span", "b", "i"];
+let map = mapBuilder(keys, values);
+console.log(map.size); // 4
+console.log(map.get(2)); // "span"
+
+
+
+ </script>
+</body>
+</html>
+
