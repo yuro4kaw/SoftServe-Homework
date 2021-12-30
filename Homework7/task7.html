@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <!--*********************** task 7 ***********************-->
     <h1>Task7</h1>
-    <select name="country" id="country">
+
+    <select name="country" id="country" onclick="r()">
       <option value="ger">Germany</option>
       <option value="usa">USA</option>
       <option value="ukr">Ukraine</option>
     </select>
-    <select name="city" id="city"></select>
+
+    <select name="city" id="city" onclick="r()"></select>
 
     <p></p>
 
-    <div id="place"></div>
     <script>
       var cities = {
         ger: ["Berlin", "Hamburg", "Stuttgart"],
@@ -40,10 +42,12 @@
         }
       }
       let parag = document.querySelector("p");
-      function r (){
+      function r() {
         parag.innerHTML = "";
-        parag.innerHTML =  country.options[country.selectedIndex].text + ", " +
-        city.options[city.selectedIndex].text;
+        parag.innerHTML =
+          country.options[country.selectedIndex].text +
+          ", " +
+          city.options[city.selectedIndex].text;
       }
     </script>
   </body>
